@@ -434,3 +434,32 @@ input type设tel
 
 #### ios上input的placeholder只显示出一半的情况：
 判断为ios获取焦点(ios上获取焦点似乎不会默认弹出输入法键盘)
+
+
+#### 安卓弹出层动画卡顿:
+这种情况，找那些没有经过加密混淆的大牌网站，观察下他们的效果啊，这是京东的方案,类名控制
+```css
+/*遮罩,定位的我就不写了*/
+#mask{
+	-webkit-transition: opacity .5s ease,visibility .5s ease;
+	transition: opacity .5s ease,visibility .5s ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#mask.show{
+	opacity: 1;
+	visibility: visible;
+}
+#filterBlock{
+	-webkit-transform: translate3d(0%, 0, 0);
+	transform: translate3d(0%, 0, 0);
+	-webkit-transition: -webkit-transform .25s ease;
+	transition: -webkit-transform .25s ease;
+	transition: transform .25s ease;
+	transition: transform .25s ease, -webkit-transform .25s ease;
+}
+#filterBlock.show{
+	-webkit-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+}
+```
