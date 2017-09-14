@@ -2,10 +2,10 @@
 
 [css自动加前缀兼容](http://pleeease.io/play/ "css自动加前缀兼容")
 
-####css三角
+#### css三角
 [用纯CSS实现的箭头](http://http://ourjs.com/detail/532bc9f36922aa7e1d000001 "用纯CSS实现的箭头")
 
-####css做小叉
+#### css做小叉
 [CSS3实现关闭按钮](http://http://blog.iderzheng.com/close-button-with-css-only/ "CSS3实现关闭按钮")
 
 #### 移动端文字溢出显示省略号
