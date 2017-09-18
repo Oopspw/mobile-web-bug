@@ -433,7 +433,7 @@ input type设tel
 ```
 
 #### ios上input的placeholder只显示出一半的情况：
-判断为ios获取焦点(ios上获取焦点似乎不会默认弹出输入法键盘)
+设置行高为1em
 
 
 #### 安卓弹出层动画卡顿:
