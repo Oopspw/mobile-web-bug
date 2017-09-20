@@ -1,14 +1,22 @@
 # 移动端一些bug处理收集及小技巧
 
+### css自动加前缀兼容
 [css自动加前缀兼容](http://pleeease.io/play/ "css自动加前缀兼容")
 
-#### css三角
+---
+
+### css三角
 [用纯CSS实现的箭头](http://http://ourjs.com/detail/532bc9f36922aa7e1d000001 "用纯CSS实现的箭头")
 
-#### css做小叉
+------------
+
+
+### css做小叉
 [CSS3实现关闭按钮](http://http://blog.iderzheng.com/close-button-with-css-only/ "CSS3实现关闭按钮")
 
-#### 移动端文字溢出显示省略号
+------------
+
+### 移动端文字溢出显示省略号
 
 ```css
 	overflow: hidden;
@@ -18,17 +26,23 @@
 	-webkit-box-orient: vertical;
 ```
 
-#### PC省略号
+------------
+
+### PC省略号
 ```css
 white-space:nowrap;
 text-overflow:ellipsis;
 overflow: hidden;
 ```
 
-#### 在苹果手机上进入页面不能滑动
+------------
+
+### 在苹果手机上进入页面不能滑动
 解决方法：将滑动事件放在图片加载完后执行
 
+------------
 
+### 判断手机系统
 #### 判断手机是否为安卓
 
 ```javascript
@@ -47,26 +61,31 @@ function isIphone(){
 }
 ```
 
-#### 适应居中
-###### 父元素定位,然后子元素：
+------------
+
+### 适应居中
+#### 父元素定位,然后子元素：
 ```css
 position: absolute; left: 50%; top: 50%; 
 -webkit-transform: translate(-50%, -50%);
 transform: translate(-50%,-50%);
 ```
 
-###### 直接子元素定位
+#### 直接子元素定位
 ```css
 position: relative; left: 50%; top: 50%; 
 -webkit-transform: translate(-50%, -50%);
 transform: translate(-50%,-50%);
 ```
 
-#### 点击事件不灵敏  
+------------
+
+### 点击事件不灵敏  
 层的关系,加层级
 
+------------
 
-#### 去除按钮蓝色边框
+### 去除按钮蓝色边框
 ```css
 a,button,input,textarea,span,div,em,i,img{-webkit-tap-highlight-color: rgba(0,0,0,0);
 -webkit-tap-highlight-color: transparent; /* For some Androids */
@@ -76,12 +95,18 @@ a,button,input,textarea,span,div,em,i,img{-webkit-tap-highlight-color: rgba(0,0,
 }
 ```
 
-#### 做遮罩层出现滑动遮罩body跟着一起动的问题:滑动穿透
-###### 解决方法:
+------------
+
+### 做遮罩层出现滑动遮罩body跟着一起动的问题:滑动穿透
+**解决方法:**
 ```css
 body.bodyCls{
 	position: fixed;
 	width: 100%;
+	height: 100%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 ```
 ```javascript
@@ -95,7 +120,10 @@ document.body.style.top = -scrollTop + 'px';
 document.body.classList.remove(bodyCls);
 document.scrollingElement.scrollTop = scrollTop;
 ```
-#### 打印系统内核
+
+------------
+
+### 打印系统内核
 ```javascript
 /* 
 		 * 智能机浏览器版本信息: 
@@ -128,6 +156,8 @@ document.scrollingElement.scrollTop = scrollTop;
 		document.writeln(" 是否iPad: " + browser.versions.iPad + '</br>');
 		document.writeln(navigator.userAgent);
 ```
+
+------------
 
 ```css
 a, img {
@@ -169,24 +199,25 @@ input::-webkit-input-speech-button {
 
 ------------
 
-
+### 上传文件
 
 ```html
 <input type=file accept="image/*">
 ```
-###### 上面的文件上传框中，accept 可以限制上传文件的类型，参数为 image/* 是所有图片类型，点击会弹出图库，也可以指定图片格式，参数设置成 image/png 则可以限制图片类型为png；参数如果为 video/* 则是选择视频的意思；accept 还可以设置多个文件格式，语法为 accept="image/gif, image/jpeg" ；
+上面的文件上传框中，accept 可以限制上传文件的类型，参数为 image/* 是所有图片类型，点击会弹出图库，也可以指定图片格式，参数设置成 image/png 则可以限制图片类型为png；参数如果为 video/* 则是选择视频的意思；accept 还可以设置多个文件格式，语法为 accept="image/gif, image/jpeg" ；
 
 ------------
 
 
-#### 使用box-shadow改变(挡住)表单自动填充后的黄色
+### 使用box-shadow改变(挡住)表单自动填充后的黄色
 
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
     box-shadow:inset 0 0 0 1000px #fff;
 }
 
+------------
 
-#### 获取url？后面的参数
+### 获取url？后面的参数
 ```javascript
 function getQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
@@ -195,7 +226,9 @@ function getQueryString(name) {
 }
 ```
 
-####获取audio是否加载完毕 并获取audio的时间获取audio是否加载完毕 并获取audio的时间
+------------
+
+### 获取audio是否加载完毕 并获取audio的时间获取audio是否加载完毕 并获取audio的时间
 ```javascript
 var aud = document.getElementById("myAudio");
     aud.onended = function() {
@@ -204,7 +237,9 @@ var aud = document.getElementById("myAudio");
     };
 ```
 
-#### 滚动条样式
+------------
+
+### 滚动条样式
 
 ```css
 ::-webkit-scrollbar {
@@ -224,19 +259,23 @@ var aud = document.getElementById("myAudio");
 }
 ```
 
+------------
 
-#### 苹果微信点击失效：cursor：point或者button,
-**所以微信端有事件的元素尽可能使用a标签**
+### 苹果微信点击失效：cursor：point或者button,
+所以微信端有事件的元素尽可能使用a标签
 
+------------
 
-#### 圆角bug
+### 圆角bug
 某些Android手机圆角失效
 background-clip: padding-box;
 
+------------
 
-#### css3实现边框1px
+### css3实现边框1px
 
-###### 原理是把原先元素的 border 去掉，然后利用 :before 或者 :after 重做 border ，并 transform 的 scale 缩小一半，原先的元素相对定位，新做的 border 绝对定位
+*原理是把原先元素的 border 去掉，然后利用 :before 或者 :after 重做 border ，并 transform 的 scale 缩小一半，原先的元素相对定位，新做的 border 绝对定位*
+
 
 **单条 border**
 
@@ -258,7 +297,7 @@ background-clip: padding-box;
             transform-origin: 0 0;
 }
 ```
-四条 border
+**四条 border**
 ```css
 
 .fourBorder{
@@ -291,7 +330,7 @@ if(window.devicePixelRatio && devicePixelRatio >= 2){
 
 ------------
 
-#### 如动画过程有闪烁（通常发生在动画开始的时候），可以尝试下面的Hack：
+### 如动画过程有闪烁（通常发生在动画开始的时候），可以尝试下面的Hack：
 
 ```css
 -webkit-backface-visibility: hidden;
@@ -304,20 +343,18 @@ backface-visibility: hidden;
 -ms-perspective: 1000;
 perspective: 1000;
 ```
-------------
-
-```css
-body{
-	-webkit-overflow-scrolling: touch;
-}
-```
-把它加在body{}区域，所有的overflow需要滚动的都可以生效了。
 
 ------------
 
-#### input 的placeholder会出现文本位置偏上的情况：PC端设置line-height等于height能够对齐，而移动端仍然是偏上，解决是设置line-height：normal，（stackoverflow也可查到这种解决办法）。
+### input 的placeholder会出现文本位置偏上的情况：
+PC端设置line-height等于height能够对齐，而移动端仍然是偏上，解决是设置line-height：normal，（stackoverflow也可查到这种解决办法）。
 
-input类型为date情况下不支持placeholder
+### input使用定位后苹果上placeholder显示不全：
+设置line-height：1em
+
+---
+
+### input类型为date情况下不支持placeholder
 解决方法：
 ```html
 <input placeholder="Date" class="textbox-n" type="text" onfocus="(this.type='date')"  id="date">
@@ -327,7 +364,7 @@ input类型为date情况下不支持placeholder
 ------------
 
 
-#### 消除transition闪屏
+### 消除transition闪屏
 两个方法：使用css3动画的时尽量利用3D加速(使用translate3d设置或者translateZ都可以开启)，从而使得动画变得流畅。动画过程中的动画闪白可以通过 backface-visibility 隐藏。
 ```css
 -webkit-transform-style: preserve-3d;
@@ -339,15 +376,7 @@ input类型为date情况下不支持placeholder
 /*（设置进行转换的元素的背面在面对用户时是否可见：隐藏）*/
 
 
-#### 关于 iOS 系统中，中文输入法输入英文时，字母之间可能会出现一个六分之一空格
-可以通过正则去掉
-this.value = this.value.replace(/\u2006/g, '');
-
-
-#### 取消input在ios下，输入的时候英文首字母的默认大写
-```html
-<input autocapitalize="off" autocorrect="off" />
-```
+---
 
 ### android 2.3 bug
 @-webkit-keyframes 需要以0%开始100%结束，0%的百分号不能去掉
@@ -362,14 +391,18 @@ translate百分比的写法和scale在一起会导致失效，例如-webkit-tran
 部分手机(如三星)，a链接支持鼠标:visited事件，也就是说链接访问后文字变为紫色
 android无法同时播放多音频audio
 
-#### fixed bug
+---
+
+### fixed bug
 ios下fixed元素容易定位出错，软键盘弹出时，影响fixed元素定位
 android下fixed表现要比iOS更好，软键盘弹出时，不会影响fixed元素定位
 ios4下不支持position:fixed
 解决方案
 可用isroll.js，暂无完美方案
 
-#### 播放视频不全屏
+---
+
+### 播放视频不全屏
 
 1.目前只有ios7+、winphone8+支持自动播放
 2.支持Airplay的设备（如：音箱、Apple TV)播放
@@ -384,8 +417,10 @@ webkit-playsinline="true"
 <video playsinline preload="auto" autoplay src="http://"></video>
 ```
 
-#### 手机web禁止微信调整字体
-we微信浏览器缩放以及分享靠的都是是微信浏览器WeixinJSBridge接口，android禁止微信浏览器调整字体大小代码如下：
+---
+
+### 手机web禁止微信调整字体
+微信浏览器缩放以及分享靠的都是是微信浏览器WeixinJSBridge接口，android禁止微信浏览器调整字体大小代码如下：
 ```javascript
 (function () {
 　　if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
@@ -418,25 +453,27 @@ function handleFontSize() {
 body{-webkit-text-size-adjust: 100% !important;}
 ```
 
+---
 
-#### ios或者安卓使用默认数字键盘：
+### ios或者安卓使用默认数字键盘：
 input type设tel
 
-#### CSS 实现隐藏滚动条同时又可以滚动
+---
+
+### CSS 实现隐藏滚动条同时又可以滚动
 .element::-webkit-scrollbar {display:none}
 
+---
 
-#### 解决ios触摸滑动卡顿：
+### 解决ios触摸滑动卡顿：
 /*允许独立的滚动区域和触摸回弹*/
 ```css
 -webkit-overflow-scrolling: touch; 
 ```
 
-#### ios上input的placeholder只显示出一半的情况：
-设置行高为1em
+---
 
-
-#### 安卓弹出层动画卡顿:
+### 安卓弹出层动画卡顿:
 这种情况，找那些没有经过加密混淆的大牌网站，观察下他们的效果啊，这是京东的方案,类名控制
 ```css
 /*遮罩,定位的我就不写了*/
