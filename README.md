@@ -110,11 +110,10 @@ a,button,input,textarea,span,div,em,i,img{-webkit-tap-highlight-color: rgba(0,0,
 ```css
 body.bodyCls{
 	position: fixed;
-	width: 100%;
-	height: 100%;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 }
 ```
 ```javascript
