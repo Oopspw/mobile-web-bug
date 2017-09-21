@@ -70,16 +70,20 @@ function isIphone(){
 ### 适应居中
 #### 父元素定位,然后子元素：
 ```css
-position: absolute; left: 50%; top: 50%; 
--webkit-transform: translate(-50%, -50%);
-transform: translate(-50%,-50%);
+{
+	position: absolute; left: 50%; top: 50%; 
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%,-50%);
+}
 ```
 
 #### 直接子元素定位
 ```css
-position: relative; left: 50%; top: 50%; 
--webkit-transform: translate(-50%, -50%);
-transform: translate(-50%,-50%);
+{
+	position: relative; left: 50%; top: 50%; 
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%,-50%);
+}
 ```
 
 ------------
@@ -517,7 +521,6 @@ input type设tel
 	width: 100%;
 	height: 0;
 	padding-bottom: 100%;
-	position: relative;
 	background: url(pic_quark_1503812032847.jpg) no-repeat center;
 	background-size: cover;
 }
