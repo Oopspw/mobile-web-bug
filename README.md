@@ -19,20 +19,24 @@
 ### 移动端文字溢出显示省略号
 
 ```css
+{
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-line-clamp: 2; //改成需要的行数
 	-webkit-box-orient: vertical;
+}
 ```
 
 ------------
 
 ### PC省略号
 ```css
-white-space:nowrap;
-text-overflow:ellipsis;
-overflow: hidden;
+{
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
 ```
 
 ------------
@@ -499,4 +503,29 @@ input type设tel
 	-webkit-transform: translate3d(100%, 0, 0);
 	transform: translate3d(100%, 0, 0);
 }
+```
+
+---
+### 不需要js实现，css实现宽高相等
+
+```css
+.wrap{
+	width: 50%;
+	margin: 0 auto;
+	}
+.box{
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+	position: relative;
+	background: url(pic_quark_1503812032847.jpg) no-repeat center;
+	background-size: cover;
+}
+```
+```html
+<div class="wrap">
+	<div class="box">
+	<!--这里用的背景图，image也是可以的-->
+	</div>
+</div>
 ```
