@@ -1,7 +1,7 @@
 # 移动端一些bug处理收集及小技巧
 
-### css自动加前缀兼容
-[css自动加前缀兼容](http://pleeease.io/play/ "css自动加前缀兼容")
+### css批量命令行加前缀兼容
+[css批量命令行加前缀兼容](https://github.com/whitetrident/css-hack "css批量命令行加前缀兼容")
 
 ---
 
