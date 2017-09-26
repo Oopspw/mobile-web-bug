@@ -531,3 +531,35 @@ input type设tel
 	</div>
 </div>
 ```
+---
+### css实现文字垂直排列
+```html
+<div class="verticle-mode">
+    <h4>咏柳</h4>
+    <p>碧玉妆成一树高，<br>万条垂下绿丝绦。<br>不知细叶谁裁出，<br>二月春风似剪刀。</p>
+</div>
+```
+```css
+.verticle-mode {
+    writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;      
+    writing-mode: vertical-rl;
+}
+/* IE7比较弱，需要做点额外的动作 */
+.verticle-mode {
+    *width: 120px;
+}
+.verticle-mode h4,
+.verticle-mode p {
+    *display: inline;
+    *writing-mode: tb-rl;
+}
+.verticle-mode h4 {
+    *float:right;
+}
+```
+---
+### 单行写一个评级组件
+```javascript
+"★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate);定义一个变量rate是1到5的值，然后执行上面代码
+```
