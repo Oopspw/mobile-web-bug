@@ -566,3 +566,10 @@ input type设tel
 ```javascript
 "★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate);定义一个变量rate是1到5的值，然后执行上面代码
 ```
+---
+### input等输入框文本不能居右（如date）或者设置textalight:right后文本可拖动情况
+```css
+{
+	direction: rtl;
+}
+```
