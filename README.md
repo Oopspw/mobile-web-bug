@@ -468,14 +468,17 @@ input type设tel
 ---
 
 ### CSS 实现隐藏滚动条同时又可以滚动
+```css
 .element::-webkit-scrollbar {display:none}
-
+```
 ---
 
 ### 解决ios触摸滑动卡顿：
-/*允许独立的滚动区域和触摸回弹*/
 ```css
--webkit-overflow-scrolling: touch; 
+{
+/*允许独立的滚动区域和触摸回弹*/
+	-webkit-overflow-scrolling: touch; 
+}
 ```
 
 ---
