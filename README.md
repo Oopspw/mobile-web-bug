@@ -18,8 +18,20 @@
 
 ### 移动端文字溢出显示省略号
 
+#### 单行
 ```css
 {
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+```
+
+#### 多行
+
+```css
+{
+	word-break: break-all;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
