@@ -16,9 +16,9 @@
 
 ------------
 
-### 移动端文字溢出显示省略号
+### 文字溢出显示省略号
 
-#### 单行
+#### 单行(pc、移动端都可)
 ```css
 {
 	text-overflow: ellipsis;
@@ -27,7 +27,7 @@
 }
 ```
 
-#### 多行
+#### 多行（移动端大部分）
 
 ```css
 {
@@ -37,17 +37,6 @@
 	display: -webkit-box;
 	-webkit-line-clamp: 2; //改成需要的行数
 	-webkit-box-orient: vertical;
-}
-```
-
-------------
-
-### PC省略号
-```css
-{
-	white-space:nowrap;
-	text-overflow:ellipsis;
-	overflow: hidden;
 }
 ```
 
