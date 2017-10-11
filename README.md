@@ -6,13 +6,13 @@
 ---
 
 ### css三角
-[用纯CSS实现的箭头](http://http://ourjs.com/detail/532bc9f36922aa7e1d000001 "用纯CSS实现的箭头")
+[用纯CSS实现的箭头](http://ourjs.com/detail/532bc9f36922aa7e1d000001 "用纯CSS实现的箭头")
 
 ------------
 
 
 ### css做小叉
-[CSS3实现关闭按钮](http://http://blog.iderzheng.com/close-button-with-css-only/ "CSS3实现关闭按钮")
+[CSS3实现关闭按钮](http://blog.iderzheng.com/close-button-with-css-only/ "CSS3实现关闭按钮")
 
 ------------
 
