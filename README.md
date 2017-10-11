@@ -216,7 +216,17 @@ input::-webkit-input-speech-button {
 
 ------------
 
+### 强制输入框数字
+两种都可以，苹果两个都会强制数字键盘
+```html
+<!--安卓微信端可以,安卓移动端低版本不行-->
+<input type="number" pattern="[0-9]*" placeholder="请输入qq号">
 
+<!--安卓无论微信还是移动端低版本（uc为例，谷歌40）都可以-->
+<input type="tel" onkeyup="this.value=this.value.replace(/\D/g,'')" >
+```
+
+---
 ### 使用box-shadow改变(挡住)表单自动填充后的黄色
 
 ```css
