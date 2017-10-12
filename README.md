@@ -21,7 +21,7 @@
 #### 单行(pc、移动端都可)
 ```css
 {
-	text-overflow: ellipsis;
+    text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
