@@ -641,6 +641,8 @@ a{
 	padding: 0 10px;
 	text-align: center;
 	border: 1px solid black;
+	/*解决ios端行内块出现的不对齐*/
+	vertical-align: top;
 }
 ```
 ```html
