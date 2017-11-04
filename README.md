@@ -664,3 +664,16 @@ a{
 ---
 ### 解决行内块换行的间距
 [去除inline-block元素间间距的N种方法](http://www.zhangxinxu.com/wordpress/2012/04/inline-block-space-remove-%E5%8E%BB%E9%99%A4%E9%97%B4%E8%B7%9D/ "去除inline-block元素间间距的N种方法")
+
+---
+### 文字排版
+```css
+{
+	/*内容在边界内换行,不截断英文单词换行*/
+	word-wrap: break-word;
+	/* 单词内换行，如果想让长单词不换行用break-word */
+	word-break: break-all;
+	/* 保留空白符跟换行，某些需要保持排版的需要，编辑文章什么的 */
+	white-space: pre-wrap;
+}
+```
