@@ -677,3 +677,13 @@ a{
 	white-space: pre-wrap;
 }
 ```
+---
+### 使用矢量图标symbol方式时，设置图标字体颜色
+```css
+{
+	svg path {
+		fill: inherit;
+	}
+}
+```
+重置后，就可以对svg设置color来改变颜色了
