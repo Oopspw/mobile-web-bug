@@ -687,3 +687,11 @@ a{
 }
 ```
 重置后，就可以对svg设置color来改变颜色了
+
+
+### 解决Chrome会在自动填充字段中添加黄色背景色
+```css
+input:-webkit-autofill {
+-webkit-box-shadow:0 0 0 50px #ffffff inset;
+}
+```
