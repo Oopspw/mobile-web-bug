@@ -695,3 +695,13 @@ input:-webkit-autofill {
 -webkit-box-shadow:0 0 0 50px #ffffff inset;
 }
 ```
+
+### 删除页面上所有搜索字段上的清除按钮
+```css
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+```
