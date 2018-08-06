@@ -398,6 +398,25 @@ PC端设置line-height等于height能够对齐，而移动端仍然是偏上，�
 ```
 *因为text是支持placeholder的。因此当用户focus的时候自动把type类型改变为date，这样既有placeholder也有datepicker了*
 
+### input 的disabled默认样式问题
+```html
+<input type="text" disabled placeholder="test">
+```
+
+```css 
+    input {
+      background-color: skyblue;
+      color: crimson;
+    }
+
+    input:disabled {
+      background-color: skyblue;
+      -webkit-text-fill-color: #000;
+      opacity: 1;
+      -webkit-opacity: 1;
+      color: #000;
+    }
+```
 ------------
 
 
